@@ -1,0 +1,105 @@
+
+<html">
+<head>
+<title>Bed & Breakfast</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header"> <img src="images/logo.jpg" width="171" height="30" alt="" id="logo"/> <img src="images/slogan.jpg" width="457" height="38" alt="" id="slogan"/>
+    <ul class="menu">
+      <li class="btn_1"><a href="#">home</a></li>
+      <li class="line"></li>
+      <li class="btn_2"><a href="#">about</a></li>
+      <li class="line"></li>
+      <li class="btn_3"><a href="#">services</a></li>
+      <li class="line"></li>
+      <li class="btn_4"><a href="#">booking</a></li>
+      <li class="line"></li>
+      <li class="btn_5"><a href="#">contacts</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="leftPan">
+      <div id="welcome">
+        <h2></h2>
+        <img src="images/img_welcome.jpg" width="66" height="66" alt="" />
+        <p id="side"><span class="headline">High class !</span> </p>
+        <div class="clear" id="welClear"></div>
+        <p><a href="#">Click for Party Booking</a></p>
+      </div>
+      <div id="services">
+        <h2></h2>
+       <p><a href="#">Click for Service</a></p>
+      </div>
+    </div>
+    <div id="rightPan">
+      <div id="rooms">
+        <h2></h2>
+        <img src="images/img_rooms.jpg" width="66" height="66" />
+        <div class="clear"></div>
+        <p><a href="#">Click for Rooms</a></p>
+      </div>
+      <div id="food">
+        <h2></h2>
+        <img src="images/img_food.jpg" width="66" height="66" alt="" />
+       <p><a href="#">Click for Food Order</a></p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+<h2 class="w3-center"></h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src=" images\11.jpg" style="width:155%">
+  <img class="mySlides" src=" images\hotel.jpg" style="width:155%">
+  <img class="mySlides" src="images\accord-chennai-stay.jpg" style="width:155%">
+<img class="mySlides" src="images\1.jpg" style="width:155%">
+<img class="mySlides" src="images\talatona-convention-hotels.jpg" style="width:155%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+
+  
+ <div id="footer">
+    <p><a href="#">HOME PAGE</a> | <a href="#">ABOUT US</a> | <a href="#">SERVICES</a> | <a href="#">BOOKING</a> | <a href="#">SUPPORT</a> | <a href="#">NEWS</a> | <a href="#">CONTACTS</a><br/>
+      </a></p>
+  </div>
+</div>x
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(11.030887,77.027161),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+  <div id="footer">
+    <p><a href="#">HOME PAGE</a> | <a href="#">ABOUT US</a> | <a href="#">SERVICES</a> | <a href="#">BOOKING</a> | <a href="#">SUPPORT</a> | <a href="#">NEWS</a> | <a href="#">CONTACTS</a><br/>
+      
+  </div>
+</div>
+</body>
+</html>
